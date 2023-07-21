@@ -11,6 +11,8 @@ namespace ui {
         
     private:
         std::string _title;
+
+    protected:
         receiver_ptr _receiver;
 
     protected: 
@@ -32,7 +34,7 @@ namespace ui {
             execute();
         }
 
-        virtual int execute() = 0;
+        virtual void execute() = 0;
 
     };
 }

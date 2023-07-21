@@ -12,11 +12,11 @@ namespace ui {
 
     public: 
         do_open_menu(std::shared_ptr<ui::menu> receiver, std::string title) : 
-            ui::command<std::shared_ptr<ui::menu>>(title, receiver) {}
+            ui::command<std::shared_ptr<ui::menu>>(title, receiver) {
+        }
 
-        int execute() override {
-            //do something
-            return 0;        
+        void execute() override {
+            _receiver->open();
         }
     };
 }

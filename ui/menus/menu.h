@@ -1,20 +1,26 @@
 #ifndef __YUANMO_UI_MENUS_MESSAGE_H__
 #define __YUANMO_UI_MENUS_MESSAGE_H__
 
-#include "command.h"
 #include <vector>
 #include <cstdarg>
 #include <memory>
 
+#include "command.h"
+
 namespace ui {
 
+    class interaction_driver;
+
     class menu {
+
     private:
+        ui::interaction_driver *_driver;
         std::string _title;
         std::vector<std::shared_ptr<ui::command<void*>>> _commands;
 
     public:
-        menu(std::string title, int command_num, std::shared_ptr<ui::command<void*>> commands...) : _title(title) {
+        menu(ui::interaction_driver *driver, std::string title, int command_num, std::shared_ptr<ui::command<void*>> commands...) : 
+            _driver(driver), _title(title) {
             va_list args;
             
             va_start(args, commands);
@@ -46,6 +52,10 @@ namespace ui {
 
         void set_command(std::vector<std::shared_ptr<ui::command<void*>>> command) {
             _commands = command;
+        }
+
+        void open() {
+
         }
     };
 }
