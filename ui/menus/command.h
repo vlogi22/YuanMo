@@ -15,10 +15,12 @@ namespace ui {
 
     protected: 
         command(const receiver_ptr rec) : 
-            _receiver(rec), _title("SAMPLE TITLE") {}
+            _title(""), _receiver(rec) {
+        }
 
-        command(const receiver_ptr rec, std::string title) : 
-            _receiver(rec), _title(title) {}
+        command(std::string title, const receiver_ptr rec) : 
+            _title(title), _receiver(rec) {
+        }
 
     public:
         std::string get_title() {
