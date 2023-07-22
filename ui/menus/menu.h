@@ -6,10 +6,9 @@
 #include <memory>
 
 #include "command.h"
+#include "../interaction_driver.h"
 
 namespace ui {
-
-    class interaction_driver;
 
     class menu {
 
@@ -55,7 +54,7 @@ namespace ui {
         }
 
         void open() {
-
+            
         }
     };
 }

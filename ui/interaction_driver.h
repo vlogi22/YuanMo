@@ -1,9 +1,9 @@
 #ifndef __YUANMO_INTERACTION_DRIVER_H__
 #define __YUANMO_INTERACTION_DRIVER_H__
 
-#include "menus/menu.h"
-
 namespace ui {
+
+    class menu;
 
     class interaction_driver {
 
