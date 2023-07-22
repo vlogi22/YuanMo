@@ -21,8 +21,6 @@ namespace ui {
         void show(ui::menu *menu) override;
         void choose(ui::menu *menu) override;
         void fill() override;
-        void render() override;
-        void close() override;
 
     protected:
         std::string read_string();

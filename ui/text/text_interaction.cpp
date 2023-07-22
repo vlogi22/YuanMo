@@ -49,12 +49,3 @@ void ui::text_interaction::choose(ui::menu *menu) {
 void ui::text_interaction::fill() {
 
 }
-
-void ui::text_interaction::render() {
-
-}
-
-void ui::text_interaction::close() {
-
-}
-

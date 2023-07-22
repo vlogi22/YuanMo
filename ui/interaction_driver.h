@@ -11,8 +11,6 @@ namespace ui {
         virtual void show(ui::menu *menu) = 0;
         virtual void choose(ui::menu *menu) = 0;
         virtual void fill() = 0;
-        virtual void render() = 0;
-        virtual void close() = 0;
     };
     
 }
