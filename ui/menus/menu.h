@@ -54,7 +54,8 @@ namespace ui {
         }
 
         void open() {
-            
+            _driver->show(this);
+            _driver->choose(this);
         }
     };
 }
