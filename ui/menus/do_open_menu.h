@@ -8,11 +8,14 @@
 
 namespace ui {
     
-    class do_open_menu : public ui::command<std::shared_ptr<ui::menu>> {
+    class do_open_menu : public ui::command {
+    
+    private:
+        ui::menu *_receiver;
 
     public: 
-        do_open_menu(std::shared_ptr<ui::menu> receiver, std::string title) : 
-            ui::command<std::shared_ptr<ui::menu>>(title, receiver) {
+        do_open_menu(std::string title, ui::menu *receiver) : 
+            ui::command(title), _receiver(receiver) {
         }
 
         void execute() override {

@@ -6,23 +6,13 @@
 
 namespace ui {
     
-    template<typename receiver_ptr>
     class command {
         
     private:
         std::string _title;
 
-    protected:
-        receiver_ptr _receiver;
-
     protected: 
-        command(const receiver_ptr rec) : 
-            _title(""), _receiver(rec) {
-        }
-
-        command(std::string title, const receiver_ptr rec) : 
-            _title(title), _receiver(rec) {
-        }
+        command(std::string title) : _title(title) { }
 
     public:
         std::string get_title() {

@@ -16,16 +16,16 @@ namespace ui {
     private:
         ui::interaction_driver *_driver;
         std::string _title;
-        std::vector<std::shared_ptr<ui::command<void*>>> _commands;
+        std::vector<ui::command*> _commands;
 
     public:
-        menu(ui::interaction_driver *driver, std::string title, int command_num, std::shared_ptr<ui::command<void*>> commands...) : 
+        menu(ui::interaction_driver *driver, std::string title, int command_num, ui::command* commands...) : 
             _driver(driver), _title(title) {
             va_list args;
             
             va_start(args, commands);
             for (int i = 0; i < command_num; i++) {
-                _commands.push_back(va_arg(args, std::shared_ptr<ui::command<void*>>));
+                _commands.push_back(va_arg(args, ui::command*));
             }
             va_end(args);
         }
@@ -38,11 +38,11 @@ namespace ui {
             _title = title;
         }
 
-        std::shared_ptr<ui::command<void*>> get_command(int i) {
+        ui::command* get_command(int i) {
             return _commands[i];
         }
 
-        std::vector<std::shared_ptr<ui::command<void*>>> get_commands() {
+        std::vector<ui::command*> get_commands() {
             return _commands;
         }
 
@@ -50,7 +50,7 @@ namespace ui {
             return _commands.size();
         }
 
-        void set_command(std::vector<std::shared_ptr<ui::command<void*>>> command) {
+        void set_command(std::vector<ui::command*> command) {
             _commands = command;
         }
 
