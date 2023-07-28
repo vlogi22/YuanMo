@@ -1,9 +1,9 @@
 #ifndef __YUANMO_TEXT_INTERACTION_H__
 #define __YUANMO_TEXT_INTERACTION_H__
 
-#include <iostream>
 #include "../interaction_driver.h"
 #include "../menus/menu.h"
+#include "../forms/form.h"
 
 namespace ui {
 
@@ -20,11 +20,11 @@ namespace ui {
 
         void show(ui::menu *menu) override;
         void choose(ui::menu *menu) override;
-        void fill() override;
+        void fill(ui::form *form) override;
 
     protected:
-        std::string read_string();
-        int read_integer();
+        std::string read_string(std::string prompt);
+        int read_integer(std::string prompt);
     };
     
 }

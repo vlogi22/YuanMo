@@ -21,10 +21,7 @@ namespace ui {
                 return _value;
             }
 
-            bool parse(std::string str) override {
-                _value = std::stoi(str, NULL, 10);
-                return true;
-            }
+           bool parse(std::string str) override { return false; }
     };
 
 }

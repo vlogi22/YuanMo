@@ -4,13 +4,14 @@
 namespace ui {
 
     class menu;
-
+    class form;
+    
     class interaction_driver {
 
     public:
         virtual void show(ui::menu *menu) = 0;
         virtual void choose(ui::menu *menu) = 0;
-        virtual void fill() = 0;
+        virtual void fill(ui::form *form) = 0;
     };
     
 }

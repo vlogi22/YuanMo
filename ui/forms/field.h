@@ -10,7 +10,6 @@ namespace ui {
         
         protected:
             std::string _prompt;
-            std::string _in;
             const std::type_info& _data_type;
 
         protected:
@@ -21,9 +20,6 @@ namespace ui {
         public:
             void set_prompt(std::string prompt) { _prompt = prompt; }
             std::string get_prompt() const{ return _prompt; }
-
-            void set_in(std::string in) { _in = in; }
-            std::string get_in() const { return _in; }
             
             const std::type_info& get_data_type() const { return _data_type; }
             
