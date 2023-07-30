@@ -1,5 +1,8 @@
 #include "text_interaction.h"
 
+#include "../menus/menu.h"
+#include "../forms/form.h"
+
 #include <iostream>
 #include <string>
 #include "prompt.h"
@@ -23,9 +26,8 @@ void ui::text_interaction::show(ui::menu *menu) {
 
     std::cout << menu->get_title() << std::endl;
     for (int i = 0; i < size; i++) {
-        menu->get_command(i)->get_title();
+        std::cout << menu->get_command(i)->get_title() << std::endl;
     }
-    std::cout << ui::CHOOSE_OPTION << std::endl;
 }
 
 void ui::text_interaction::choose(ui::menu *menu) {

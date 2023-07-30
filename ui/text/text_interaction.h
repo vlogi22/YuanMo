@@ -1,20 +1,20 @@
 #ifndef __YUANMO_TEXT_INTERACTION_H__
 #define __YUANMO_TEXT_INTERACTION_H__
 
+#include <string>
 #include "../interaction_driver.h"
-#include "../menus/menu.h"
-#include "../forms/form.h"
 
 namespace ui {
 
+    class menu;
+    class form;
     class text_interaction : public interaction_driver {
-
-    private:
-        /* data */
-    public:
-        text_interaction(/* args */) {
-        }
         
+    public:
+        text_interaction() : 
+            interaction_driver() {
+        }
+
         ~text_interaction() {
         }
 
