@@ -1,26 +1,27 @@
-#ifndef __YUANMO_UI_MENUS_MESSAGE_H__
-#define __YUANMO_UI_MENUS_MESSAGE_H__
+#ifndef __YUANMO_UI_MENUS_MENU_H__
+#define __YUANMO_UI_MENUS_MENU_H__
 
+#include <iostream>
 #include <vector>
 #include <string>
 #include <cstdarg>
 #include <memory>
 
 #include "command.h"
-#include "../interaction_driver.h"
+#include "../dialog.h"
 
 namespace ui {
-
+    
     class menu {
 
     private:
-        ui::interaction_driver *_driver;
+        ui::dialog *_ui;
         std::string _title;
         std::vector<ui::command*> _commands;
 
     public:
-        menu(ui::interaction_driver *driver, std::string title, int command_num, ui::command* commands...) : 
-            _driver(driver), _title(title) {
+        menu(ui::dialog *ui, std::string title, int command_num, ui::command* commands...) : 
+            _ui(ui), _title(title) {
             va_list args;
             
             va_start(args, commands);
@@ -28,6 +29,10 @@ namespace ui {
                 _commands.push_back(va_arg(args, ui::command*));
             }
             va_end(args);
+        }
+
+        menu(std::string title, int command_num, ui::command* commands...) : 
+            menu(ui::dialog::UI, title, command_num, commands) {
         }
 
         std::string get_title() {
@@ -55,8 +60,8 @@ namespace ui {
         }
 
         void open() {
-            _driver->show(this);
-            _driver->choose(this);
+            _ui->show(this);
+            _ui->choose(this);
         }
     };
 }
