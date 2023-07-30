@@ -11,15 +11,13 @@ namespace yuan_mo {
         yuan_mo::game *_game;
 
     public:
-        game_manager::game_manager() {
+        game_manager() {
             _game = new yuan_mo::game();
         }
 
-        game_manager::game_manager(yuan_mo::game *game) : 
+        game_manager(yuan_mo::game *game) : 
             _game(game) {
         }
-        
-        game_manager::~game_manager() { }
 
         void new_game() { _game  = new yuan_mo::game(); }
     };

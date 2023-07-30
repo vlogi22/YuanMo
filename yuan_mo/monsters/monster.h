@@ -14,7 +14,7 @@ namespace yuan_mo {
                 _health(hp), _atack(atk), _defense(def) {    
             }
 
-            virtual ~monster();
+            virtual ~monster() {}
 
             int get_health() { return _health; }
             void increase_health(int val) { _health -= val; }

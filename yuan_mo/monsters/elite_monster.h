@@ -13,7 +13,8 @@ namespace yuan_mo {
                 yuan_mo::monster(hp, atk, def) {
             }
 
-            ~elite_monster() {}
+            ~elite_monster() {
+            }
 
             void atacked(int atk) {
                 increase_health(-atk + get_defense() + 1);
