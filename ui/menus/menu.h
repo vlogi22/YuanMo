@@ -20,19 +20,17 @@ namespace ui {
         std::vector<ui::command*> _commands;
 
     public:
-        menu(ui::dialog *ui, std::string title, int command_num, ui::command* commands...) : 
-            _ui(ui), _title(title) {
-            va_list args;
+        menu(std::string title, int command_num, ...) : 
+            _ui(ui::dialog::UI), _title(title) {
+
+            std::va_list args;
             
-            va_start(args, commands);
+            va_start(args, command_num);
             for (int i = 0; i < command_num; i++) {
-                _commands.push_back(va_arg(args, ui::command*));
+                ui::command* c = va_arg(args, ui::command*);
+                _commands.push_back(c);
             }
             va_end(args);
-        }
-
-        menu(std::string title, int command_num, ui::command* commands...) : 
-            menu(ui::dialog::UI, title, command_num, commands) {
         }
 
         std::string get_title() {
@@ -67,4 +65,3 @@ namespace ui {
 }
 
 #endif
-
