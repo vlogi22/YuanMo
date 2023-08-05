@@ -3,7 +3,7 @@
 
 #include <string>
 
-namespace yuan_mo::app::main {
+namespace yuan_mo::app::main::label {
 
     static const std::string TITLE = "MAIN MENU";
 
