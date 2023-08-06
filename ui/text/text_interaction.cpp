@@ -1,12 +1,12 @@
 #include "text_interaction.h"
 
-#include "../menus/menu.h"
-#include "../forms/form.h"
-
 #include <iostream>
 #include <string>
+
 #include "prompt.h"
 #include "message.h"
+#include "../menus/menu.h"
+#include "../forms/form.h"
 
 std::string ui::text_interaction::read_string(std::string prompt) {
     std::string str;

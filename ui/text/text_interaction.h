@@ -2,12 +2,14 @@
 #define __YUANMO_TEXT_INTERACTION_H__
 
 #include <string>
+
 #include "../interaction_driver.h"
 
 namespace ui {
 
     class menu;
     class form;
+    
     class text_interaction : public interaction_driver {
         
     public:
@@ -25,6 +27,7 @@ namespace ui {
     protected:
         std::string read_string(std::string prompt);
         int read_integer(std::string prompt);
+        
     };
     
 }

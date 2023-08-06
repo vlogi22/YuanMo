@@ -8,6 +8,7 @@ namespace ui {
     static std::string operationFailed(std::string error) {
         return "Operação inválida: " + error;
     }
+    
 }
 
 #endif

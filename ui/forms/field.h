@@ -8,22 +8,23 @@ namespace ui {
 
     class field {
         
-        protected:
-            std::string _prompt;
-            const std::type_info& _data_type;
+    protected:
+        std::string _prompt;
+        const std::type_info& _data_type;
 
-        protected:
-            field(std::string prompt, const std::type_info& data_type) : 
-                _prompt(prompt), _data_type(data_type) {
-            }
+    protected:
+        field(std::string prompt, const std::type_info& data_type) : 
+            _prompt(prompt), _data_type(data_type) {
+        }
 
-        public:
-            void set_prompt(std::string prompt) { _prompt = prompt; }
-            std::string get_prompt() const{ return _prompt; }
-            
-            const std::type_info& get_data_type() const { return _data_type; }
-            
-            virtual bool parse(std::string str) = 0;
+    public:
+        void set_prompt(std::string prompt) { _prompt = prompt; }
+        std::string get_prompt() const{ return _prompt; }
+        
+        const std::type_info& get_data_type() const { return _data_type; }
+        
+        virtual bool parse(std::string str) = 0;
+        
     };
 
 }

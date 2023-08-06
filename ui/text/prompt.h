@@ -6,7 +6,9 @@
 namespace ui {
     
     static const std::string CHOOSE_OPTION = "Choose an option: ";
+
     static const std::string EXIT = "0 - Exit";
+    
 }
 
 #endif

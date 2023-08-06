@@ -4,7 +4,6 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-#include <any>
 
 #include "field.h"
 #include "typed_field.h"
@@ -62,7 +61,9 @@ namespace ui {
         std::string get_string(std::string key) {
             return dynamic_cast<typed_field<std::string>*>(_fields[key])->get_value();
         }
+
     };
+
 }
 
 #endif

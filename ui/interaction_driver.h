@@ -13,6 +13,7 @@ namespace ui {
         virtual void show(ui::menu *menu) = 0;
         virtual void choose(ui::menu *menu) = 0;
         virtual void fill(ui::form *form) = 0;
+        
     };
     
 }

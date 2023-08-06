@@ -12,7 +12,9 @@ namespace ui {
         std::string what() {
             return "Custom C++ Exception";
         }
+        
     };
+
 }
 
 #endif

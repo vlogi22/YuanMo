@@ -61,7 +61,9 @@ namespace ui {
             _ui->show(this);
             _ui->choose(this);
         }
+
     };
+
 }
 
 #endif

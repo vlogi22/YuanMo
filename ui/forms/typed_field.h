@@ -9,19 +9,20 @@ namespace ui {
     template<typename T>
     class typed_field : public ui::field {
         
-        private:
-            T _value;
+    private:
+        T _value;
 
-        public:
-            typed_field(std::string prompt) : 
-                field(prompt, typeid(T)), _value(T()) {
-            }
+    public:
+        typed_field(std::string prompt) : 
+            field(prompt, typeid(T)), _value(T()) {
+        }
 
-            T get_value() const {
-                return _value;
-            }
+        T get_value() const {
+            return _value;
+        }
 
-           bool parse(std::string str) override { return false; }
+        bool parse(std::string str) override { return false; }
+        
     };
 
 }

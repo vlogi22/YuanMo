@@ -8,6 +8,7 @@ namespace ui {
     static std::string invalid_option(int option) {
         return "Invalid option: " + option;
     }
+    
 }
 
 #endif

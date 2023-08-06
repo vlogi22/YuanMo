@@ -8,6 +8,7 @@
 namespace ui {
     
     class menu;
+    
     class dialog {
     
     private:
@@ -33,6 +34,7 @@ namespace ui {
         void fill(ui::form *form) {
             _backend->fill(form);
         }
+        
     };
 
 }
