@@ -1,16 +1,15 @@
 #ifndef __YUANMO_APP_H__
 #define __YUANMO_APP_H__
 
-#include "../yuan_mo/game_manager.h"
-#include "main/menu.h"
 #include <iostream>
+#include "main/menu.h"
+#include "../yuan_mo/game_manager.h"
 
 namespace yuan_mo::app {
 
     class app {
 
-        public:
-
+    public:
         static int main() {
             yuan_mo::game_manager* game = new game_manager();
             yuan_mo::app::main::menu* menu = new yuan_mo::app::main::menu(game);
@@ -18,6 +17,7 @@ namespace yuan_mo::app {
 
             return 0;
         }
+
     };
 
 }

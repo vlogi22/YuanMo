@@ -14,6 +14,7 @@ namespace yuan_mo::app::main::label {
     static const std::string GAME_SETTINGS = "3 - GAME SETTINGS";
 
     static const std::string EXIT_GAME = "4 - EXIT GAME";
+    
 }
 
 #endif
