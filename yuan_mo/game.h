@@ -3,8 +3,8 @@
 
 #include "maps/map.h"
 #include "maps/map_factory.h"
-#include "monsters/monster.h"
-#include "monsters/monster_factory.h"
+#include "characters/character.h"
+#include "characters/player_character.h"
 
 namespace yuan_mo {
 
@@ -13,12 +13,12 @@ namespace yuan_mo {
     private:
         int _lvl;
         yuan_mo::map* _map;
-        yuan_mo::monster* _main_character;
+        yuan_mo::characters::character* _player;
 
     public:
         game(int lvl = 1) : _lvl(lvl) {
             _map = yuan_mo::map_factory::create_map(lvl);
-            _main_character = yuan_mo::monster_factory::create_elite_monster(lvl);
+            _player = new yuan_mo::characters::player_character(1, 10, 1, 1);
         }
         
         ~game();
@@ -27,9 +27,13 @@ namespace yuan_mo {
             return _map;
         }
 
-        yuan_mo::monster* get_character() {
-            return _main_character;
+        yuan_mo::characters::character* get_character() {
+            return _player;
         }
+
+        void increase_player_health(int val);
+        void increase_player_attack(int val);
+        void increase_player_defense(int val);
         
     };
     

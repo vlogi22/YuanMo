@@ -21,6 +21,10 @@ namespace yuan_mo {
 
         void new_game() { _game  = new yuan_mo::game(); }
         
+        void increase_player_health(int val);
+        void increase_player_attack(int val);
+        void increase_player_defense(int val);
+
     };
 
 }
