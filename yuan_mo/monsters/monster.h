@@ -4,6 +4,7 @@
 namespace yuan_mo {
 
     class monster {
+
         private:
             int _health;
             int _atack;
@@ -25,8 +26,9 @@ namespace yuan_mo {
             bool is_dead() { return _health <= 0; }
 
             virtual void atacked(int atk) = 0;
-
+            
     };
+
 }
 
 #endif

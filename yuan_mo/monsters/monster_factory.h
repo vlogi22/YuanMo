@@ -8,18 +8,20 @@
 namespace yuan_mo {
 
     class monster_factory {
-        private:
+        
+    private:
 
-        public:
-            static yuan_mo::normal_monster *create_normal_monster(int map_lvl) {
-                return new yuan_mo::normal_monster(map_lvl, 1, 1);
-            }
-            
-            static yuan_mo::elite_monster *create_elite_monster(int map_lvl) {
-                return new yuan_mo::elite_monster(map_lvl, 1, 1);
-            }
-
+    public:
+        static yuan_mo::normal_monster *create_normal_monster(int map_lvl) {
+            return new yuan_mo::normal_monster(map_lvl, 1, 1);
+        }
+        
+        static yuan_mo::elite_monster *create_elite_monster(int map_lvl) {
+            return new yuan_mo::elite_monster(map_lvl, 1, 1);
+        }
+        
     };
+
 }
 
 #endif

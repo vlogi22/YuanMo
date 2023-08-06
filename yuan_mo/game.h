@@ -30,6 +30,7 @@ namespace yuan_mo {
         yuan_mo::monster* get_character() {
             return _main_character;
         }
+        
     };
     
 }

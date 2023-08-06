@@ -6,19 +6,22 @@
 namespace yuan_mo {
 
     class normal_monster : public yuan_mo::monster {
-        private:
+        
+    private:
 
-        public:
-            normal_monster(int hp, int atk, int def) : 
-                yuan_mo::monster(hp, atk, def) {
-            }
+    public:
+        normal_monster(int hp, int atk, int def) : 
+            yuan_mo::monster(hp, atk, def) {
+        }
 
-            ~normal_monster() {}
+        ~normal_monster() {}
 
-            void atacked(int atk) {
-                increase_health(-atk + get_defense());
-            }
+        void atacked(int atk) {
+            increase_health(-atk + get_defense());
+        }
+
     };
+
 }
 
 #endif

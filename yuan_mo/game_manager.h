@@ -20,6 +20,7 @@ namespace yuan_mo {
         }
 
         void new_game() { _game  = new yuan_mo::game(); }
+        
     };
 
 }

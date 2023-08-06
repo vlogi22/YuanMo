@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <memory>
+
 #include "room.h"
 
 namespace yuan_mo {
