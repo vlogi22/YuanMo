@@ -5,25 +5,23 @@
 
 #include "label.h"
 #include "../../../ui/menus/command.h"
-#include "../../../yuan_mo/game_manager.h"
 
 namespace yuan_mo::app::player::stats {
+
+    class menu;
 
     class do_add_health : public ui::command {
 
     private:
-        yuan_mo::game_manager *_receiver;
+        menu *_receiver;
 
     public:
-        do_add_health(yuan_mo::game_manager *receiver) :
+        do_add_health(menu *receiver) :
             ui::command(label::ADD_HP), _receiver(receiver) {
         }
 
-        void execute() override {
-            //do something
-        }
+        void execute() override;
 
-        
     };
     
 }

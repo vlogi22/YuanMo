@@ -12,6 +12,10 @@ namespace yuan_mo::app::player::stats::label {
     static const std::string ADD_DEF = "2 - ADD DEFENSE";
     
     static const std::string ADD_HP = "3 - ADD HEALTH";
+
+    static const std::string RESTART = "4 - RESTART";
+
+    static const std::string CONFIRM = "5 - CONFIRM";
     
 }
 
