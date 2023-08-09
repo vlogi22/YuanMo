@@ -24,6 +24,7 @@ int ui::text_interaction::read_integer(std::string prompt) {
 void ui::text_interaction::show(ui::menu *menu) {
     int size = menu->get_size();
 
+    std::cout << "======================" << std::endl;
     std::cout << menu->get_title() << std::endl;
     for (int i = 0; i < size; i++) {
         std::cout << menu->get_command(i)->get_title() << std::endl;
@@ -36,6 +37,8 @@ void ui::text_interaction::choose(ui::menu *menu) {
 
     while (true) {
         try {
+            show(menu);
+
             option = read_integer(ui::CHOOSE_OPTION);
             if (option == 0) { return ; }
 

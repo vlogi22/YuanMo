@@ -58,7 +58,6 @@ namespace ui {
         }
 
         void open() {
-            _ui->show(this);
             _ui->choose(this);
         }
 
