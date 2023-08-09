@@ -7,20 +7,24 @@
 
 #include "field.h"
 #include "typed_field.h"
-#include "../interaction_driver.h"
+#include "../dialog.h"
 
 namespace ui {
 
     class form {
         
     private:
-        ui::interaction_driver *_driver;
+        ui::dialog *_ui;
         std::string _title;
         std::unordered_map<std::string, ui::field*> _fields;
 
     public:
-        form(ui::interaction_driver *driver, std::string title) : 
-            _driver(driver), _title(title) {
+        form(ui::dialog *ui, std::string title) : 
+            _ui(ui), _title(title) {
+        }
+
+        form(std::string title) : 
+            form(ui::dialog::UI, title) {
         }
 
         std::string get_title() {
@@ -61,6 +65,8 @@ namespace ui {
         std::string get_string(std::string key) {
             return dynamic_cast<typed_field<std::string>*>(_fields[key])->get_value();
         }
+
+        void parse();
 
     };
 

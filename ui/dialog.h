@@ -3,12 +3,12 @@
 
 #include "interaction_driver.h"
 #include "text/text_interaction.h"
-#include "forms/form.h"
 
 namespace ui {
     
     class menu;
-    
+    class form;
+
     class dialog {
     
     private:
