@@ -13,11 +13,11 @@ namespace ui {
         std::string _text;
 
     public:
-        display::display(std::string text = "") : 
+       display(std::string text = "") : 
             _text(text) {
         }
         
-        display::~display() {
+       ~display() {
         }
 
         void display_text() {
@@ -39,7 +39,7 @@ namespace ui {
         }
 
         void clear() {
-            _text = "";
+            _text.clear();
         }
 
         template<class T>
@@ -52,7 +52,7 @@ namespace ui {
 
         template<class T>
         void print_vector(std::vector<T> vector) {
-            if (object == nullptr) return ;
+            if (vector == nullptr) return ;
 
             add_vector(vector);
             display_text();
