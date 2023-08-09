@@ -28,6 +28,7 @@ void ui::text_interaction::show(ui::menu *menu) {
     for (int i = 0; i < size; i++) {
         std::cout << menu->get_command(i)->get_title() << std::endl;
     }
+    std::cout << ui::EXIT << std::endl;
 }
 
 void ui::text_interaction::choose(ui::menu *menu) {
