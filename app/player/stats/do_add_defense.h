@@ -4,6 +4,7 @@
 #include <string>
 
 #include "label.h"
+#include "prompt.h"
 #include "../../../ui/menus/command.h"
 
 namespace yuan_mo::app::player::stats {
@@ -18,6 +19,7 @@ namespace yuan_mo::app::player::stats {
     public:
         do_add_defense(menu *receiver) :
             ui::command(label::ADD_DEF), _receiver(receiver) {
+                add_integer_field("def", yuan_mo::app::player::stats::prompt::ADD_DEF);
         }
 
         void execute() override;

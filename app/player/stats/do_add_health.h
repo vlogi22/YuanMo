@@ -4,6 +4,7 @@
 #include <string>
 
 #include "label.h"
+#include "prompt.h"
 #include "../../../ui/menus/command.h"
 
 namespace yuan_mo::app::player::stats {
@@ -18,6 +19,7 @@ namespace yuan_mo::app::player::stats {
     public:
         do_add_health(menu *receiver) :
             ui::command(label::ADD_HP), _receiver(receiver) {
+                add_integer_field("hp", yuan_mo::app::player::stats::prompt::ADD_HP);
         }
 
         void execute() override;

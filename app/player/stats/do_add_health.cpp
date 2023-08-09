@@ -3,5 +3,7 @@
 #include "menu.h"
 
 void yuan_mo::app::player::stats::do_add_health::execute() {
-    _receiver->increase_health_points(1);
+    int hp = get_integer_field("hp");
+
+    _receiver->increase_health_points(hp);
 }

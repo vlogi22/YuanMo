@@ -3,5 +3,7 @@
 #include "menu.h"
 
 void yuan_mo::app::player::stats::do_add_attack::execute() {
-    _receiver->increase_attack_points(1);
+    int atk = get_integer_field("atk");
+
+    _receiver->increase_attack_points(atk);
 }
