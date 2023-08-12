@@ -19,15 +19,12 @@ namespace ui {
 
         void display_text();
         
-        template<class T>
-        void add_line(T object, bool new_line = false);
-        template<class T>
-        void add_vector(std::vector<T> vector);
+        void add_line(std::string str, bool new_line = false);
+        void add_vector(std::vector<std::string> vector);
 
-        template<class T>
-        void print(T object);
-        template<class T>
-        void print_vector(std::vector<T> vector);
+        void print(std::string str);
+        void println(std::string str);
+        void print_vector(std::vector<std::string> vector);
 
         void clear();
 
