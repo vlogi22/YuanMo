@@ -26,6 +26,11 @@ void ui::text_interaction::show(ui::menu *menu) {
 
     std::cout << "======================" << std::endl;
     std::cout << menu->get_title() << std::endl;
+    if (!menu->get_description().empty()) {
+        std::cout << "----------------------" << std::endl;
+        std::cout << menu->get_description() << std::endl;
+    }
+    std::cout << "======================" << std::endl;
     for (int i = 0; i < size; i++) {
         std::cout << menu->get_command(i)->get_title() << std::endl;
     }
