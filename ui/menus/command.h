@@ -14,6 +14,8 @@ namespace ui {
     private:
         std::string _title;
         ui::form *_form;
+    
+    protected:
         ui::display *_display;
 
     protected: 
