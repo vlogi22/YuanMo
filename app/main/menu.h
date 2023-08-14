@@ -4,10 +4,8 @@
 #include <string>
 
 #include "label.h"
-#include "do_load_game.h"
-#include "../player/stats/menu.h"
+#include "do_new_game.h"
 #include "../../ui/menus/menu.h"
-#include "../../ui/menus/do_open_menu.h"
 #include "../../yuan_mo/game_manager.h"
 
 namespace yuan_mo::app::main {
@@ -20,7 +18,7 @@ namespace yuan_mo::app::main {
     public:
         menu(yuan_mo::game_manager* receiver) :
             ui::menu(label::TITLE, 1,
-                new ui::do_open_menu(label::START_GAME, new yuan_mo::app::player::stats::menu(receiver))
+                new do_new_game(receiver)
             ),
             _receiver(receiver) {
         }
