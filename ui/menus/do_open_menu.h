@@ -18,9 +18,7 @@ namespace ui {
             ui::command(title), _receiver(receiver) {
         }
 
-        void execute() override {
-            _receiver->open();
-        }
+        void execute() override;
         
     };
 
