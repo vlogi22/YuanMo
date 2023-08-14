@@ -27,7 +27,7 @@ namespace yuan_mo {
             return _map;
         }
 
-        yuan_mo::characters::character* get_character() {
+        yuan_mo::characters::character* get_player() {
             return _player;
         }
 

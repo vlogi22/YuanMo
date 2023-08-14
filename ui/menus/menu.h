@@ -17,12 +17,11 @@ namespace ui {
     private:
         ui::dialog *_ui;
         std::string _title;
-        std::string _description;
         std::vector<ui::command*> _commands;
 
     public:
         menu(std::string title, int command_num, ...) : 
-            _ui(ui::dialog::UI), _title(title), _description("") {
+            _ui(ui::dialog::UI), _title(title) {
 
             std::va_list args;
             
@@ -35,7 +34,7 @@ namespace ui {
         }
 
         menu(std::string title, std::string description, int command_num, ...) : 
-            _ui(ui::dialog::UI), _title(title), _description(description) {
+            _ui(ui::dialog::UI), _title(title) {
 
             std::va_list args;
             
@@ -55,12 +54,8 @@ namespace ui {
             _title = title;
         }
 
-        std::string get_description() {
-            return _description;
-        }
-
-        void set_description(std::string description) {
-            _description = description;
+        virtual std::string get_description() {
+            return "";
         }
 
         ui::command* get_command(int i) {

@@ -1,5 +1,9 @@
 #include "game_manager.h"
 
+yuan_mo::characters::character* yuan_mo::game_manager::get_player() {
+    return _game->get_player();
+}
+
 void yuan_mo::game_manager::increase_player_health(int val) { 
     _game->increase_player_health(val);
 }

@@ -46,6 +46,7 @@ namespace yuan_mo::app::player::stats {
         void set_defense_points(int val) { _defense_points = val; }
         void increase_defense_points(int val) { _defense_points += val; }
         
+        std::string get_description() override;
     };
 
 }
